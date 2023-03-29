@@ -1,12 +1,17 @@
+import { useState } from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
 
 function App() {
+  const [showCart, setShowCart] = useState();
+  const toggleCart = () => {
+    setShowCart(!showCart);
+  };
   return (
     <div className="App">
-      <Navbar />
-      <Home />
+      <Navbar toggleCart={toggleCart}/>
+      <Home showCart={showCart}/>
     </div>
   );
 }

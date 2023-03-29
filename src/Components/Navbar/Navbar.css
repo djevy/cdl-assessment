@@ -1,0 +1,24 @@
+#navbar {
+  min-height: 50px;
+  background-color: rgb(10, 148, 72);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 50% 50%;
+  padding: 5px 20px;
+}
+
+#navbar .app-title {
+  font-size: 1.5em;
+}
+#navbar .cart-icon {
+  margin-left: auto;
+}
+#navbar .cart-icon span {
+  cursor: pointer;
+  font-size: 2em;
+  transform: scale(1);
+}
+
+#navbar .cart-icon span:hover {
+    transform: scale(1.2);
+  }

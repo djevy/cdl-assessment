@@ -1,0 +1,21 @@
+.cart {
+    position: absolute;
+    right: 5px;
+    margin-top: 5px;
+    background-color: rgb(28, 202, 107);
+    min-width: 300px;
+    min-height: 300px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 15px;
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+#checkout-button {
+
+}
