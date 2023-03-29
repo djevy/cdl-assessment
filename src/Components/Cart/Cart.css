@@ -17,6 +17,10 @@
     display: flex;
 }
 
-#checkout-button {
-
+.cart-item {
+    border-radius: 15px;
+    background-color: #fff;
+    width: 100px;
+    padding: 5px 10px;
+    margin: 10px auto;
 }

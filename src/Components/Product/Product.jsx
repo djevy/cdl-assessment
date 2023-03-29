@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Product.css";
 
-const Product = ({product}) => {
+const Product = ({ products, product, setProducts }) => {
   const [productCount, setProductCount] = useState(0);
   const productIncrease = () => {
     setProductCount(productCount + 1);
@@ -12,10 +12,24 @@ const Product = ({product}) => {
     }
   };
 
+  const handleAddProducts = (productName) => {
+    // Find the product with the given name
+    const currentIndex = products.findIndex((item) => item.name === productName);
+
+    // Update the product quantity
+    const updatedProduct = Object.assign({}, products[currentIndex]);
+    updatedProduct.quantity = productCount;
+
+    // Update the products list
+    products[currentIndex] = updatedProduct;
+    setProducts(products);
+    console.log(products)
+  };
+
   return (
     <div className="product">
-      <p>{product.product}</p>
-      <p>£{(product.price/100).toFixed(2)}</p>
+      <p>{product.name}</p>
+      <p>£{(product.price / 100).toFixed(2)}</p>
       <div className="product-add">
         <span
           onClick={productDecrease}
@@ -31,7 +45,9 @@ const Product = ({product}) => {
           add
         </span>
       </div>
-      <button className="button">Add to Cart</button>
+      <button onClick={()=> handleAddProducts(product.name)} className="button">
+        Add to Cart
+      </button>
     </div>
   );
 };
