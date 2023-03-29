@@ -1,0 +1,9 @@
+.products-layout {
+  padding: 10px 50px;
+  margin: auto;
+  max-width: 75vw;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

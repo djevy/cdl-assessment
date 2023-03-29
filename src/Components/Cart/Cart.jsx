@@ -6,6 +6,7 @@ const Cart = ({ showCart }) => {
     <div className={showCart ? "cart show" : "cart"}>
       <h3>Shopping Cart</h3>
       <div className="cart-products"></div>
+      <div className="total">Total: </div>
       <button className="button" id="checkout-button">
         Checkout
       </button>
