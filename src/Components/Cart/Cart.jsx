@@ -16,7 +16,7 @@ const Cart = ({ showCart, cart }) => {
               </div>
             );
           }
-          return <div key={key}>Add to the cart</div>;
+          return <div key={key}></div>;
         })}
       </div>
       <div className="total">Total: </div>

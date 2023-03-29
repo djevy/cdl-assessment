@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Product.css";
 
-const Product = ({ products, product, setProducts }) => {
+const Product = ({ products, product, setProducts, setCart }) => {
   const [productCount, setProductCount] = useState(0);
   const productIncrease = () => {
     setProductCount(productCount + 1);
@@ -14,7 +14,9 @@ const Product = ({ products, product, setProducts }) => {
 
   const handleAddProducts = (productName) => {
     // Find the product with the given name
-    const currentIndex = products.findIndex((item) => item.name === productName);
+    const currentIndex = products.findIndex(
+      (item) => item.name === productName
+    );
 
     // Update the product quantity
     const updatedProduct = Object.assign({}, products[currentIndex]);
@@ -23,7 +25,9 @@ const Product = ({ products, product, setProducts }) => {
     // Update the products list
     products[currentIndex] = updatedProduct;
     setProducts(products);
-    console.log(products)
+
+    console.log(products);
+    setCart(products.slice());
   };
 
   return (
@@ -45,7 +49,10 @@ const Product = ({ products, product, setProducts }) => {
           add
         </span>
       </div>
-      <button onClick={()=> handleAddProducts(product.name)} className="button">
+      <button
+        onClick={() => handleAddProducts(product.name)}
+        className="button"
+      >
         Add to Cart
       </button>
     </div>

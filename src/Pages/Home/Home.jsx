@@ -13,8 +13,8 @@ const Home = ({ showCart }) => {
   ]);
   return (
     <div>
-      <Cart showCart={showCart} cart={cart} />
-      <Products products={products} setProducts={setProducts}/>
+      <Cart showCart={showCart} cart={cart}/>
+      <Products products={products} setProducts={setProducts} setCart={setCart} cart={cart}/>
     </div>
   );
 };
