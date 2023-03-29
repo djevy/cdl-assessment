@@ -9,3 +9,13 @@
     border-radius: 10px;
     margin: 10px;
 }
+.product-add {
+    display: flex;
+}
+.product-num-change {
+    cursor: pointer;
+}
+.product-count {
+    background-color: #fff;
+    padding: 0 5px;
+}

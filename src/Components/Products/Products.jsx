@@ -2,15 +2,14 @@ import React from "react";
 import Product from "../Product/Product";
 import "./Products.css";
 
-const Products = () => {
+const Products = ({ products, setCart }) => {
   return (
     <div>
       <h2>Products</h2>
       <div className="products-layout">
-        <Product />
-        <Product />
-        <Product />
-        <Product />
+        {products.map((product, key) => (
+          <Product key={key} product={product} />
+        ))}
       </div>
     </div>
   );
