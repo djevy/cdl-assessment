@@ -25,8 +25,6 @@ const Product = ({ products, product, setProducts, setCart }) => {
     // Update the products list
     products[currentIndex] = updatedProduct;
     setProducts(products);
-
-    console.log(products);
     setCart(products.slice());
   };
 

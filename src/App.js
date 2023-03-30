@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Navbar toggleCart={toggleCart}/>
-      <Home showCart={showCart}/>
+      <Home showCart={showCart} toggleCart={toggleCart}/>
     </div>
   );
 }
